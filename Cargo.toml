@@ -1,0 +1,23 @@
+[package]
+
+name = "nu_plugin_kcl"
+version = "0.1.0"
+authors = ["Jesús Pérez <jpl@jesusperez.com>"]
+edition = "2024"
+description = "Nushell plugin for KCL CLI wrapper"
+repository = "https://github.com/jesusperez/nu_plugin_kcl"
+license = "MIT"
+
+[dependencies]
+# for local development, you can use a path dependency
+nu-plugin = { path = "../nushell/crates/nu-plugin" }
+nu-protocol = { path = "../nushell/crates/nu-protocol", features = ["plugin"] }
+#nu-plugin = "0.104.0"
+#nu-protocol = { version = "0.104.0", features = ["plugin"] }
+
+anyhow = "1.0"
+tempfile = "3"
+
+[dev-dependencies]
+nu-plugin-test-support = { path = "../nushell/crates/nu-plugin-test-support" }
+#nu-plugin-test-support = { version = "0.104.0" }
